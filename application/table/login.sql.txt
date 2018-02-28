@@ -1,0 +1,24 @@
+-- Adminer 4.2.5 MySQL dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `login`;
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `old_password` varchar(100) NOT NULL,
+  `image` varchar(150) DEFAULT NULL,
+  `update_date` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `status` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `login` (`id`, `name`, `email`, `password`, `old_password`, `image`, `update_date`, `status`) VALUES
+(1,	'Arunv m',	'admin@gmail.com',	'$2a$08$B3V3iwiCPVlG8ZDht7oYJufzhPvGCLJcYk6.oO8qEUOlxedmgajWS',	'$2a$08$lKpnDoAjClkur63Bc9y/U.TioC45PjqBTVi6MVlV01IHXGacNgp/2',	'images_(2).jpg',	'2018-02-13 05:42:52',	1);
+
+-- 2018-02-13 09:17:19
